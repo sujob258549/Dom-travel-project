@@ -43,17 +43,17 @@
 //        const yourBaset = document.getElementById('your-baset');
 //        const yourBasetText = yourBaset.innerText;
 
-         
+
 //        if(parseInt(yourBasetText) - pleasePriseFloat < 0 ){
 //         alert();
 //         return;
-       
+
 //       }  
 
 //       parseInt(yourBasetText) - pleasePriseFloat;
 //       yourBaset.innerText = newBaset;
 
-  
+
 //     //    if(totalAmount <= 900){
 //     //     return totalAmount;
 //     //    }
@@ -98,7 +98,9 @@ for (const cardButton of cardButtons) {
         totalPrise += productPrice;
 
         const totalPriseDisplay = document.getElementById('total-prise');
-        totalPriseDisplay.innerText = totalPrise.toFixed(2); 
+        const grandtotalPriseDisplay = document.getElementById('grand-prise');
+        totalPriseDisplay.innerText = totalPrise.toFixed(2);
+         grandtotalPriseDisplay.innerText = totalPrise.toFixed(2);
 
         const yourBaset = document.getElementById('your-baset');
         const yourBasetText = parseInt(yourBaset.innerText);
@@ -107,9 +109,61 @@ for (const cardButton of cardButtons) {
             return;
         }
 
-        yourBaset.innerText = (yourBasetText - productPrice).toFixed(2); 
+        yourBaset.innerText = (yourBasetText - productPrice).toFixed(2);
         indexCount++;
 
     });
 }
 
+function sideAmount(catagory) {
+    const tolalDiscound = document.getElementById('grand-prise');
+    const atolalDiscound = document.getElementById('total-prise');
+    const totalText = atolalDiscound.innerText;
+    const totaldisCountFloat = parseFloat(totalText).toFixed(2);
+    let adjustedTotal = totalAmountFloat;
+    if (catagory == "tran") {
+        const trin = adjustedTotal -= 200;
+        tolalDiscound.innerText = trin;
+
+    }
+    else if (catagory === "bus") {
+        const bus = adjustedTotal += 200;
+        tolalDiscound.innerText = bus;
+        console.log(bus)
+
+    }
+    else if (catagory === "flite") {
+        const flite = adjustedTotal += 500;
+        tolalDiscound.innerText = flite;
+
+
+    }
+    else {
+        totaldisCountFloat;
+        tolalDiscound.innerText = totaldisCountFloat;
+
+    }
+
+    console.log(totaldisCountFloat)
+
+}
+
+function sideAmount(category) {
+    const totalDiscountElement = document.getElementById('grand-prise');
+    const totalAmountElement = document.getElementById('total-prise');
+    const totalText = totalAmountElement.innerText;
+    const totalAmountFloat = parseFloat(totalText);
+
+    let adjustedTotal = totalAmountFloat;
+
+    if (category === "tran") {
+        adjustedTotal -= 200; // Subtract 200 for "tran" category
+    } else if (category === "bus") {
+        adjustedTotal += 200; // Add 200 for "bus" category
+    } else if (category === "flite") {
+        adjustedTotal += 500; // Add 500 for "flite" category
+    }
+
+    // Update the displayed total with the adjusted total
+    totalDiscountElement.innerText = adjustedTotal.toFixed(2); // Ensure two decimal places
+}

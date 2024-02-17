@@ -76,7 +76,7 @@
                 <div
                     class="flex flex-col-reverse gap-10  lg:gap-24 md:flex-row justify-around items-center max-h-screen px-0 md:px-14 lg:px-16 ">
 
-                    <div class="flex flex-col gap-5 md:gap-4 flex-1">
+                    <div class="flex flex-col gap-5 md:gap-4 flex-1 md:px-0 px-10">
                         <h3 class="text-3xl font-bold">List Travel</h3>
                         <p>Ines Maione, Marketing & PR expert, brings a wealth of experience from her time as Marketing Communications Manager at Stollfuß Media, where she oversaw print ads, PR, partnerships, and online marketing. Her marketing career kicked off with the German National Tourist Board after earning a B.S. in Business Administration with a marketing focus.</p>
                             <h3 class="text-3xl font-bold">Total Budget- <span id="your-baset">900</span>$ </h3>
@@ -141,12 +141,12 @@
                                 <hr class="">
                                 <h2 id="total-cost" class="text-2xl text-center pt-3">Total cost: <span id="total-prise">0</span> $ </h2>
                                 <div class="flex flex-row gap-2 justify-center py-3 pb-5">
-                                    <button class=" p-1 px-4  font-sans text-sm hover:bg-slate-500 hover:text-white bg-slate-400 rounded-md">Tran - 200</button>
-                                    <button class=" p-1 px-4  font-sans text-sm hover:bg-slate-500 hover:text-white bg-slate-400 rounded-md">Bas + 200</button>
-                                    <button class=" p-1 px-4 font-sans text-sm hover:bg-slate-500 hover:text-white bg-slate-400 rounded-md">Flite + 200</button>
+                                    <button onclick="sideAmount('tran')" class=" p-1 px-4  font-sans text-sm hover:bg-slate-500 hover:text-white bg-slate-400 rounded-md">Tran - 200</button>
+                                    <button onclick="sideAmount('bus')" class=" p-1 px-4  font-sans text-sm hover:bg-slate-500 hover:text-white bg-slate-400 rounded-md">Bas + 200</button>
+                                    <button onclick="sideAmount('flite')" class=" p-1 px-4 font-sans text-sm hover:bg-slate-500 hover:text-white bg-slate-400 rounded-md">Flite + 500</button>
                                 </div>
                                 <hr>
-                                <h2 class="text-2xl pt-3 text-center">Grand Total:  <span  id="grand-total"></span> <span id="total-prise"></span>$</h2>
+                                <h2 class="text-2xl pt-3 text-center">Grand Total:  <span  id="grand-total"></span> <span id="grand-prise"></span>$</h2>
                                 
                                 <!-- <button class="btn mt-5 bg-[#F11A7B] w-full text-white hover:text-black">Make
                                     Purchase</button> -->
